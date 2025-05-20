@@ -255,7 +255,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://www.flaticon.com/free-animated-icon/galaxy_18649794"> BIA: Black Hole region Formation</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://i.postimg.cc/Wbnkbg4n/black-hole.png"> BIA: Black Hole region Formation</h2>
     </div>
   </div>
   <!-- </div> -->
@@ -266,17 +266,24 @@
     <div class="column is-full-width">
       <div class="content has-text-justified"> 
         <p>
-          LLaVa connects pre-trained <a href="https://openai.com/research/clip">CLIP ViT-L/14</a> visual encoder and large language model <a href="https://github.com/lm-sys/FastChat">Vicuna</a>, using a simple projection matrix.   We consider a two-stage instruction-tuning procedure:
-          <ul type="1">
-            <li><b>Stage 1: Pre-training for Feature Alignment</b>. <span style="font-size: 95%;">Only the projection matrix is updated, based on a subset of CC3M.</span></li>
-            <li><b>Stage 2: Fine-tuning End-to-End</b>. <span style="font-size: 95%;">Both the projection matrix and LLM are updated for two different use senarios: 
-              <ul type="1">
-                <li> <b>Visual Chat</b>: LLaVA is fine-tuned on our generated multimodal instruction-following data for daily user-oriented applications. 
-                <li> <b>Science QA</b>: LLaVA is fine-tuned on this multimodal reasonsing dataset for the science domain.</span></li>
-              </ul>  
-          </ul>  
-          Please check out our 
-          <a href="https://github.com/haotian-liu/LLaVA/blob/main/docs/MODEL_ZOO.md">[Model Zoo]</a>.
+          We begin by inverting the source image <em>x<sub>r</sub></em> to obtain its latent code <em>h<sub>r</sub></em> in the h-space.
+          To strengthen the black hole region for identity unlearning, we sample <em>n</em> neighboring latent codes 
+          <em>h<sub>j</sub> = h<sub>r</sub> + Δ</em>, where <em>Δ</em> is derived from a random latent code 
+          <em>h<sub>ran</sub></em> scaled within the range <em>[0, α<sub>max</sub>]</em>.
+        </p>
+        
+        <p>
+          Each decoded image <em>x<sub>j</sub></em> is embedded using ArcFace to extract its identity feature 
+          <em>f<sub>j</sub></em>. We compute the cosine similarity <em>sim<sub>r,j</sub></em> between 
+          <em>f<sub>j</sub></em> and the original identity feature <em>f<sub>r</sub></em>. Latent codes with 
+          <em>sim<sub>r,j</sub> &gt; th<sub>r</sub></em> are considered identity-similar (label = 1), while others are labeled dissimilar (label = 0).
+        </p>
+        
+        <p>
+          These labeled latent codes are used to train a Support Vector Machine (SVM), which defines a separation 
+          direction <em>d<sub>id</sub></em> and constructs a boundary around <em>h<sub>r</sub></em> in latent space. 
+          This boundary effectively delineates the <strong>black hole region</strong> <em>𝔅<sub>h</sub></em>, 
+          which absorbs identity-specific information during the unlearning process.
         </p>
       </div>
       <centering>
