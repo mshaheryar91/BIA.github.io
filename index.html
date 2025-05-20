@@ -255,7 +255,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://i.postimg.cc/Wbnkbg4n/black-hole.png"> BIA: Black Hole Region Formation</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="2%" src="https://i.postimg.cc/Wbnkbg4n/black-hole.png"> BIA: Black Hole Region Formation</h2>
     </div>
   </div>
   <!-- </div> -->
@@ -288,7 +288,7 @@
       </div>
       <centering>
         <div style="text-align: center;">
-          <img id="teaser" width="40%" src="static/images/black_hole_finalday.png">     
+          <img id="teaser" width="70%" src="static/images/black_hole_finalday.png">     
         </div>
 
       
@@ -305,7 +305,7 @@
   <!-- Results. -->
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"><img id="painting_icon" width="3%" src="https://cdn-icons-png.flaticon.com/512/3515/3515174.png"> Performance</h2>
+      <h2 class="title is-3"><img id="painting_icon" width="2%" src="https://i.postimg.cc/BvJ7Px5n/3d.png"> BIA Framework</h2>
     </div>
   </div>
 
@@ -319,14 +319,17 @@
   <!-- Grounedtext2img. -->
   <div class="columns is-centered">
     <div class="column is-full-width">
-      <h2 class="title is-4"><img id="painting_icon" width="4%" src="https://cdn-icons-png.flaticon.com/512/1698/1698535.png"> <span style="font-size: 100%;">Visual Chat:</span> Towards building multimodal GPT-4 level chatbot  </h2>
+      <h2 class="title is-4"><img id="painting_icon" width="4%" src="https://i.postimg.cc/HsXCQ9Mw/galaxy.png"> <span style="font-size: 100%;">Identity Absorption </span> and Black Hole Wrapping </h2>
       
       <div>
-        <a href="https://plotly.com/~lichunyuan24/5/?share_key=d78QObaCAYCIy8PJpe3gd1" target="_blank" title="llava_gpt4_pie" style="display: block; text-align: center;">  <img id="painting_icon" width="90%" src="images/pie_llava_gpt4.png"> </a>
+        <a target="_blank" title="BIA Framework" style="display: block; text-align: center;">  <img id="painting_icon" width="90%" src="static/images/main_final.png"> </a>
 
     </div>
 
-    <p style="font-family:Times New Roman"><b>An evaluation dataset with 30 unseen images is constructed: each image is assocaited with three types of instructions: conversation, detailed description and complex reasoning. This leads to 90 new language-image instructions, on which we test LLaVA and GPT-4, and use GPT-4 to rate their responses from score 1 to 10. The summed score and relative score per type is reported. Overall, LLaVA achieves 85.1% relative score compared with GPT-4, indicating the effectinvess of the proposed self-instruct method in multimodal settings</b>               
+    <p style="font-family:Times New Roman">
+  <b>
+    An overview of the proposed Black Hole-Driven Identity Absorption (BIA) framework is illustrated. Starting with a source image x<sub>r</sub>, we extract its latent code h<sub>r</sub> in h-space. Using the black hole region formation process, a black hole is formed around h<sub>r</sub>, attracting neighboring latent codes to absorb identity-specific features. To guide this absorption, a wrapper loss L<sub>wrapper</sub> is introduced, encouraging identity-similar points within the black hole to align with non-identical ones, while preserving image quality. Additionally, a semantic loss L<sub>sem</sub> ensures that h<sub>r</sub> and its edited version ĥ<sub>r</sub> retain non-identity attributes. This leads to a generative model that effectively removes identity information while preserving high semantic and visual fidelity.
+  </b>               
     </div>
   </div>
 
@@ -352,13 +355,13 @@
 
   <div class="columns is-centered has-text-centered">
     <div class="column is-six-fifths">
-      <h2 class="title is-3"> Examples on Visual Instruction Following</h2>
+      <h2 class="title is-3"> Qualitative Comparison</h2>
     </div>
   </div>
 
     <div class="columns is-centered has-text-centered">
       <div class="column is-six-fifths">
-         <h2 class="title is-4">Visual Reasoning on two examples from <a href="https://arxiv.org/abs/2303.08774">OpenAI GPT-4 Technical Report</a></h2>
+         <h2 class="title is-4">For each source image (first row), GUIDE [53], Baseline, and our approach BIA demonstrate identity unlearning within the pre-trained model. </h2>
       </div>
       </div>  
 
@@ -428,18 +431,12 @@
     <div class="container is-max-desktop content">
       <h2 class="title">BibTeX</h2>
       <pre><code>
-  @misc{liu2023improvedllava,
-          author={Liu, Haotian and Li, Chunyuan and Li, Yuheng and Lee, Yong Jae},
-          title={Improved Baselines with Visual Instruction Tuning}, 
-          publisher={arXiv:2310.03744},
-          year={2023},
-  }
-
-  @inproceedings{liu2023llava,
-    author      = {Liu, Haotian and Li, Chunyuan and Wu, Qingyang and Lee, Yong Jae},
-    title       = {Visual Instruction Tuning},
-    booktitle   = {NeurIPS},
-    year        = {2023}
+ 
+  @inproceedings{BIA2025,
+    author      = {Shaheryar, Muhammad and Lee, Jong Taek and Jung, Soon Ki},
+    title       = {Black Hole-Driven Identity Absorbing in Diffusion Models},
+    booktitle   = {CVPR},
+    year        = {2025}
   }
   </code></pre>
     </div>
@@ -450,22 +447,13 @@
       <h2 class="title">Acknowledgement</h2>
       <p>
         This website is adapted from <a
-        href="https://github.com/nerfies/nerfies.github.io">Nerfies</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
-        Commons Attribution-ShareAlike 4.0 International License</a>.  We thank the LLaMA team for giving us access to their models, and open-source projects, including Alpaca and Vicuna.
+        href="https://llava-vl.github.io/">LLaVA</a>, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative
+        Commons Attribution-ShareAlike 4.0 International License</a>.  We thank the LLaMA team for giving us accessto open-source projects.
       </p>
 
-      <p>
-<b>Usage and License Notices</b>: The data, code and checkpoint is intended and licensed for research use only. They are also restricted to uses that follow the license agreement of CLIP,  LLaMA, Vicuna and GPT-4. The dataset is CC BY NC 4.0 (allowing only non-commercial use) and models trained using the dataset should not be used outside of research purposes.
-</p>
+     
 
-      <p>
-      <a href='https://github.com/Computer-Vision-in-the-Wild/'><img id="painting_icon" width="10%" src="https://avatars.githubusercontent.com/u/97258247?s=200&v=4"></a> 
-      Related Links: 
-      <a href='https://react-vl.github.io/'>[REACT]</a>  
-      <a href='https://gligen.github.io/'>[GLIGEN]</a> 
-      <a href='https://github.com/Computer-Vision-in-the-Wild/'>[Computer Vision in the Wild (CVinW)]</a> 
-      <a href='https://instruction-tuning-with-gpt-4.github.io/'>[Insutrction Tuning with GPT-4]</a>      
-      </p>    
+     
     </div>
   </section>
 
